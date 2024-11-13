@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 function Greeting({ name, age, isLoggedIn, hobbies, address }) {
   return (
@@ -18,3 +19,5 @@ function Greeting({ name, age, isLoggedIn, hobbies, address }) {
     </div>
   );
 }
+
+export default App;

@@ -1,7 +1,11 @@
 import React from 'react';
 import './App.css'
 
-function Greeting({ name, age, isLoggedIn, hobbies, address }) {
+const App = () => {
+    function Greeting({ name, age, isLoggedIn, hobbies, address }) {
+    }
+};  
+
   return (
     <div>
       <p>Hello, {name}!</p>
@@ -18,6 +22,5 @@ function Greeting({ name, age, isLoggedIn, hobbies, address }) {
       <p>City: {address.city}</p>
     </div>
   );
-}
 
 export default App;

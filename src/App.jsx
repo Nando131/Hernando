@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import React from 'react';
 import './App.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-
-function  App () {
+function MyComponent({ name, age, isLoggedIn, hobbies, address }) {
   return (
     <div>
       <p>Hello, {name}!</p>
@@ -24,8 +24,13 @@ function  App () {
   );
 }
 
- 
-
-export default App;
-
-
+ReactDOM.render(
+  <MyComponent
+    name="Alice"
+    age={30}
+    isLoggedIn={true}
+    hobbies={['Reading', 'Coding', 'Hiking']}
+    address={{ street: '123 Main St', city: 'Anytown' }}
+  />,
+  document.getElementById('root')
+);

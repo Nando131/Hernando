@@ -5,9 +5,10 @@ import './App.css'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function MyComponent({ name, age, isLoggedIn, hobbies, address }) {
+function App ({ name, age, isLoggedIn, hobbies, address }) {
   return (
-    <div>
+    <>
+    {/* <div>
       <p>Hello, {name}!</p>
       <p>You are {age} years old.</p>
       {isLoggedIn ? <p>You are logged in.</p> : null}
@@ -20,17 +21,11 @@ function MyComponent({ name, age, isLoggedIn, hobbies, address }) {
       <p>Address:</p>
       <p>Street: {address.street}</p>
       <p>City: {address.city}</p>
-    </div>
-  );
-}
+      hello
+    </div> */}
+    hello
+          </>
+ );
+}  
 
-ReactDOM.render(
-  <MyComponent
-    name="Alice"
-    age={30}
-    isLoggedIn={true}
-    hobbies={['Reading', 'Coding', 'Hiking']}
-    address={{ street: '123 Main St', city: 'Anytown' }}
-  />,
-  document.getElementById('root')
-);
+export default App;

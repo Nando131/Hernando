@@ -1,27 +1,31 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import React from 'react';
 import './App.css'
 
-import React from 'react';
 
-function MyComponent({ stringProp, numberProp, booleanProp, arrayProp, objectProp }) {
+function  App () {
   return (
     <div>
-      <p>String Prop: {stringProp}</p>
-      <p>Number Prop: {numberProp}</p>
-      <p>Boolean Prop: {booleanProp ? 'True' : 'False'}</p>
-      <p>Array Prop:</p>
+      <p>Hello, {name}!</p>
+      <p>You are {age} years old.</p>
+      {isLoggedIn ? <p>You are logged in.</p> : null}
+      <p>Hobbies:</p>
       <ul>
-        {arrayProp.map((item, index) => (
-          <li key={index}>{item}</li>
+        {hobbies.map((hobby, index) => (
+          <li key={index}>{hobby}</li>
         ))}
       </ul>
-      <p>Object Prop:</p>
-      <p>Name: {objectProp.name}</p>
-      <p>Age: {objectProp.age}</p>
+      <p>Address:</p>
+      <p>Street: {address.street}</p>
+      <p>City: {address.city}</p>
     </div>
   );
 }
+
+ 
+
+export default App;
 
 
